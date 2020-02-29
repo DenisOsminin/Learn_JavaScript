@@ -76,20 +76,20 @@ let appData = {
     },
     chooseIncome: function() {
         let items = prompt("что принесет дополнительный доход (Перечислите через запятую)", "");
-        if (typeof(items) != "string" || items == "" || items == null) {
+        if (typeof(items) != "string" || items == "" || typeof(items) == null) {
             console.log("Некорректные данные! Повторите ввод!");
         } else {
             appData.income = items.split(", ");
             appData.income.push(prompt("Может что-то еще?", ""));
             appData.income.sort();
         }
-        appData.income.forEach(function(itemmassive, i) {
-            console.log("Способы доп. заработка: " + (i+1) + " - " + itemmassive);
+        appData.income.forEach(function(itemall, i) {
+            console.log("Способы доп. заработка: " + (i+1) + " - " + itemall);
         }); 
     }
 };
 
-for (let key in appData) {
-    console.log("Наша программа включает в себя: " + key + " - " + appData[key]);
-};
+//for (let key in appData) {
+//    console.log("Наша программа включает в себя: " + key + " - " + appData[key]);
+//};
 
