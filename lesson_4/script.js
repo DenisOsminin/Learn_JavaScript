@@ -89,7 +89,7 @@ let appData = {
     }
 };
 
-//for (let key in appData) {
-//    console.log("Наша программа включает в себя: " + key + " - " + appData[key]);
-//};
+for (let key in appData) {
+    console.log("Наша программа включает в себя: " + key + " - " + appData[key]);
+};
 
